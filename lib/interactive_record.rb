@@ -56,6 +56,7 @@ class InteractiveRecord
     attribute_value = attribute.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute_key} = '#{attribute_value}'" 
     DB[:conn].execute(sql)
+    binding.pry
   end
   
 end
